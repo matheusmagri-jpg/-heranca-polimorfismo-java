@@ -1,13 +1,14 @@
 package funcionarios.service;
 
-import funcionarios.model.Funcionario;
+import funcionarios.model.Pagavel;
 
 public class ControleDeBonificacoes {
 
     private double totalDeBonificacoes = 0;
 
-    public void registra(Funcionario f) {
-        totalDeBonificacoes = totalDeBonificacoes + f.getBonificacao();
+    // Aceita qualquer objeto que implemente Pagavel
+    public void registra(Pagavel p) {
+        totalDeBonificacoes = totalDeBonificacoes + p.getBonificacao();
     }
 
     public double getTotalDeBonificacoes() {
